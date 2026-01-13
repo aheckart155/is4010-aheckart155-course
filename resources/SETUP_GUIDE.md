@@ -215,6 +215,14 @@ Open your terminal and type the following command. You should see a version numb
 
 `python --version` or `python3 --version`
 
+### Note on Alternative Python Tools
+
+During class demonstrations, the instructor may use [`uv`](https://docs.astral.sh/uv/), a modern Python package manager and tooling suite. Using `uv` is **completely optional** for this course - all required work uses standard Python tools (pip, venv, pytest).
+
+If you're interested in trying `uv`, see the [official documentation](https://docs.astral.sh/uv/) for installation and usage instructions. `uv` can simplify virtual environment management and provides fast dependency installation, but it's not required or covered in course materials.
+
+---
+
 ## 9. Installing course packages
 
 This course requires a few external Python packages. You can install them all with a single command.

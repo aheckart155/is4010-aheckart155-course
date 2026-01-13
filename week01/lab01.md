@@ -518,6 +518,54 @@ nothing to commit, working tree clean
 - **Wrong directory**: Make sure you're in repository root (`pwd` should show `is4010-YOUR-USERNAME-labs`)
 - **Recreate venv**: Delete `venv/` folder and run `python3 -m venv venv` again
 
+### Virtual Environment Creation Fails (ensurepip Error)
+
+**Problem**: `python -m venv venv` fails with error message:
+```
+Error: Command '['.../venv/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+```
+
+**Cause**: Your Python installation doesn't include pip bundled with it. This can happen with Python installed via certain package managers or tools.
+
+**Solutions** (try in order):
+
+1. **Reinstall Python from python.org** (Recommended):
+   - Download from [python.org/downloads](https://www.python.org/downloads/)
+   - Run the installer (ensure "Add to PATH" is checked on Windows)
+   - This ensures you have the full Python distribution with pip included
+
+2. **Create venv without pip, then install pip manually**:
+   ```bash
+   # Create venv without pip
+   python3 -m venv --without-pip venv
+
+   # Activate the venv
+   source venv/bin/activate  # macOS/Linux
+   source venv/Scripts/activate  # Windows Git Bash
+
+   # Install pip manually
+   curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+   python get-pip.py
+   rm get-pip.py
+
+   # Now install course requirements
+   pip install -r requirements.txt
+   ```
+
+3. **If you have `uv` installed** (advanced users):
+   ```bash
+   # Use uv to create the venv instead
+   uv venv
+
+   # Activate as normal
+   source .venv/bin/activate  # Note: uv creates .venv by default
+
+   # Install dependencies
+   uv pip install -r requirements.txt
+   ```
+
+**Verification**: After fixing, you should be able to run `pip --version` inside the activated venv.
+
 ### Git Push Rejected
 
 **Problem**: `error: failed to push some refs to...`
