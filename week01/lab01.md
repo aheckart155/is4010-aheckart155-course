@@ -242,7 +242,7 @@ pwd
 ls -la
 ```
 
-You should see folders: `module01/`, `lab02/`, `lab03/`, etc.
+You should see folders: `week01/`, `lab02/`, `lab03/`, etc.
 
 ---
 
@@ -307,7 +307,7 @@ Let's verify everything works by creating a simple program.
    code .
    ```
 
-2. In VS Code, navigate to the `module01/` folder in the left sidebar
+2. In VS Code, navigate to the `week01/` folder in the left sidebar
 
 3. Create a new file: `hello.py`
 
@@ -349,9 +349,9 @@ cd ~/is4010/is4010-YOUR-USERNAME-labs
 source venv/bin/activate
 
 # Run the program
-python module01/hello.py
+python week01/hello.py
 # Or on macOS/Linux:
-python3 module01/hello.py
+python3 week01/hello.py
 ```
 
 #### Expected Output
@@ -377,10 +377,10 @@ Now you'll use Git to save and upload your work to GitHub.
 ```bash
 # Check what changed
 git status
-# Should show: modified: module01/hello.py (or untracked file)
+# Should show: modified: week01/hello.py (or untracked file)
 
 # Add your file to the staging area
-git add module01/hello.py
+git add week01/hello.py
 
 # Verify it's staged
 git status
@@ -418,7 +418,7 @@ Git will remember your credentials for future pushes (credential caching).
 #### Verify on GitHub
 
 1. Go to your repository: `https://github.com/YOUR-USERNAME/is4010-YOUR-USERNAME-labs`
-2. Navigate to the `module01/` folder
+2. Navigate to the `week01/` folder
 3. Click on `hello.py` to view its contents
 4. Click on the commit message to see your commit details
 5. Verify the commit shows your name and the timestamp
@@ -451,7 +451,7 @@ After completing all steps, you should have:
 - `pytest --version` works inside venv
 
 ✅ **First commit complete**:
-- `hello.py` created in `module01/` folder
+- `hello.py` created in `week01/` folder
 - Program runs successfully and shows Python version
 - Changes committed and pushed to GitHub
 - Commit visible in GitHub web interface
@@ -461,7 +461,7 @@ After completing all steps, you should have:
 ```bash
 $ cd ~/is4010/is4010-jsmith-labs
 $ source venv/bin/activate
-(venv) $ python3 module01/hello.py
+(venv) $ python3 week01/hello.py
 Hello, IS4010!
 My development environment is ready.
 
@@ -703,7 +703,7 @@ pytest --version && echo "✓ pytest installed"
 
 # Verify hello.py exists and runs
 echo -e "\n=== Lab 01 Program ==="
-$PYTHON_CMD module01/hello.py
+$PYTHON_CMD week01/hello.py
 ```
 
 If all checks pass with checkmarks (✓), you're ready to submit!
@@ -715,7 +715,7 @@ If all checks pass with checkmarks (✓), you're ready to submit!
 git status
 
 # If you made any changes, stage and commit
-git add module01/
+git add week01/
 git commit -m "Final submission: Lab 01"
 
 # Push to GitHub
@@ -727,7 +727,7 @@ git push origin main
 1. Go to: `https://github.com/YOUR-USERNAME/is4010-YOUR-USERNAME-labs`
 2. Verify the repository is **private** (🔒 lock icon)
 3. Verify **bgreenwell** is listed under Settings → Collaborators
-4. Navigate to `module01/` folder
+4. Navigate to `week01/` folder
 5. Click on `hello.py` and verify contents are correct
 6. Check recent commits show your work
 
@@ -773,7 +773,7 @@ Use this checklist to verify you've completed everything:
 - [ ] **Dependencies installed**: `pytest --version` works inside activated venv
 
 ### Lab Deliverable
-- [ ] **hello.py created**: File exists at `module01/hello.py`
+- [ ] **hello.py created**: File exists at `week01/hello.py`
 - [ ] **hello.py runs successfully**: Outputs greeting and Python version info
 - [ ] **Changes committed**: `git log` shows your commit with descriptive message
 - [ ] **Changes pushed**: `hello.py` visible on GitHub in your repository

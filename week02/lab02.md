@@ -74,23 +74,23 @@ In this part, you'll use GitHub Copilot to implement Python functions from docst
    cd ~/is4010/is4010-YOUR-USERNAME-labs
    ```
 
-2. **Ensure module02 folder exists** (it should already exist from the template):
+2. **Ensure week02 folder exists** (it should already exist from the template):
    ```bash
-   ls module02/
+   ls week02/
    ```
 
 3. **Create the Python file**:
    ```bash
    # Using VS Code
-   code module02/module02.py
+   code week02/lab02.py
 
    # Or using touch
-   touch module02/module02.py
+   touch week02/lab02.py
    ```
 
 #### Implement Functions with Copilot
 
-1. **Copy the function stubs below** into your `module02/module02.py` file
+1. **Copy the function stubs below** into your `week02/lab02.py` file
 
 2. **For each function**:
    - Place your cursor inside the function body (after the docstring, on a new line)
@@ -106,7 +106,7 @@ In this part, you'll use GitHub Copilot to implement Python functions from docst
    source venv/Scripts/activate  # Windows Git Bash
 
    # Run Python interactively to test
-   python -i module02/module02.py
+   python -i week02/lab02.py
 
    # Try your functions:
    >>> factorial(5)
@@ -120,7 +120,7 @@ In this part, you'll use GitHub Copilot to implement Python functions from docst
 
 #### Function Stubs
 
-Copy all three functions into `module02/module02.py`:
+Copy all three functions into `week02/lab02.py`:
 
 ```python
 def factorial(n):
@@ -209,10 +209,10 @@ In this part, you'll use conversational AI to solve three common development tas
 
 ```bash
 # Create the prompts file
-code module02/module02_prompts.md
+code week02/week02_prompts.md
 
 # Or using touch
-touch module02/module02_prompts.md
+touch week02/week02_prompts.md
 ```
 
 #### Challenge Structure
@@ -225,12 +225,12 @@ For each of the three problems below, you'll:
    - **Task**: Be specific about what you want (debug, refactor, document)
    - **Format**: Specify how you want the response (code block, explanation, step-by-step)
 
-2. **Document your work** in `module02_prompts.md`:
+2. **Document your work** in `week02_prompts.md`:
    - A heading for the problem (e.g., `### Problem 1: Debugging`)
    - The exact prompt you used (in a code block or quote block)
    - The final, corrected code the AI provided (in a Python code block)
 
-#### Example Format for module02_prompts.md
+#### Example Format for week02_prompts.md
 
 ```markdown
 # Lab 02: Prompt Engineering Solutions
@@ -350,18 +350,18 @@ def calculate_area(length, width):
 
 After completing this lab, you should have:
 
-✅ **module02/module02.py** containing:
+✅ **week02/lab02.py** containing:
 - Three working functions (no `pass` statements remaining)
 - All functions correctly implementing their docstring specifications
 - Code generated with GitHub Copilot assistance
 
-✅ **module02/module02_prompts.md** containing:
+✅ **week02/week02_prompts.md** containing:
 - Three sections (one per problem)
 - Your actual prompts used with conversational AI
 - The AI's corrected/refactored/documented code
 - Optional reflections on what you learned
 
-### Sample module02/module02.py
+### Sample week02/lab02.py
 
 ```python
 def factorial(n):
@@ -378,7 +378,7 @@ def factorial(n):
 # ... other functions with working implementations
 ```
 
-### Sample module02_prompts.md Structure
+### Sample week02_prompts.md Structure
 
 ```markdown
 # Lab 02: Prompt Engineering Solutions
@@ -457,7 +457,7 @@ def factorial(n):
 **Solutions**:
 ```bash
 # Test interactively
-python -i module02/module02.py
+python -i week02/lab02.py
 
 # Try the examples from the docstrings:
 >>> factorial(5)
@@ -475,7 +475,7 @@ False  # Should be False
 
 ### Markdown Formatting Issues
 
-**Problem**: Not sure how to format module02_prompts.md correctly
+**Problem**: Not sure how to format week02_prompts.md correctly
 
 **Solutions**:
 - Use triple backticks for code blocks: ` ```python `
@@ -558,7 +558,7 @@ This prompt is much more likely to get you a helpful, complete response!
 
 1. **Test with examples** from your docstring:
 ```python
-python -i module02/module02.py
+python -i week02/lab02.py
 >>> is_prime(17)  # Should be True
 >>> is_prime(1)   # Should be False (1 is not prime by definition)
 >>> is_prime(2)   # Should be True (2 is the smallest prime)
@@ -583,11 +583,11 @@ Copilot might suggest a test suite!
 
 ### What to Submit
 
-Commit and push your completed `module02/` folder to your GitHub repository. No Canvas submission required.
+Commit and push your completed `week02/` folder to your GitHub repository. No Canvas submission required.
 
-**Your module02/ folder must contain**:
-1. `module02.py` - Three working functions (factorial, is_prime, reverse_string)
-2. `module02_prompts.md` - Three prompt engineering solutions
+**Your week02/ folder must contain**:
+1. `lab02.py` - Three working functions (factorial, is_prime, reverse_string)
+2. `week02_prompts.md` - Three prompt engineering solutions
 
 ### Git Workflow
 
@@ -597,10 +597,10 @@ cd ~/is4010/is4010-YOUR-USERNAME-labs
 
 # Verify your changes
 git status
-ls module02/
+ls week02/
 
-# Stage your module02 folder
-git add module02/
+# Stage your week02 folder
+git add week02/
 
 # Commit with descriptive message
 git commit -m "Complete Lab 02: AI-assisted development
@@ -619,10 +619,10 @@ Before the due date, verify:
 
 - [ ] Repository is **private**
 - [ ] Instructor (`bgreenwell`) added as collaborator
-- [ ] `module02/` folder exists in repository root
-- [ ] `module02/module02.py` exists with three complete functions (no `pass` statements)
-- [ ] `module02/module02_prompts.md` exists with three problem sections
-- [ ] Each function in module02.py works correctly (tested interactively)
+- [ ] `week02/` folder exists in repository root
+- [ ] `week02/lab02.py` exists with three complete functions (no `pass` statements)
+- [ ] `week02/week02_prompts.md` exists with three problem sections
+- [ ] Each function in lab02.py works correctly (tested interactively)
 - [ ] Each problem in prompts.md includes your prompt and AI's solution
 - [ ] Changes successfully pushed to GitHub (visible on website)
 
@@ -650,7 +650,7 @@ Use this checklist to verify completion:
 
 **This lab is worth 10 points total:**
 
-- ✅ **7 points**: All three functions in module02.py work correctly
+- ✅ **7 points**: All three functions in lab02.py work correctly
   - 2 points per function (factorial, is_prime, reverse_string)
   - +1 bonus point when all three are perfect
 

@@ -1,5 +1,6 @@
 name: Week 04 - Data Structures
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'week04/**'
@@ -18,5 +19,23 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Check if lab file exists
+        id: check_file
+        run: |
+          if [ -f "week04/lab04.py" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run Week 04 tests
+        if: steps.check_file.outputs.exists == 'true'
         run: pytest week04/tests/ -v
+
+      - name: Lab file not found
+        if: steps.check_file.outputs.exists == 'false'
+        run: |
+          echo "⚠️ week04/lab04.py not found"
+          echo "Create this file to enable automated testing"
+          exit 0
