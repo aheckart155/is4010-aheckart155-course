@@ -28,6 +28,6 @@ jobs:
           if [ -f week02/lab02_prompts.md ]; then
             echo "✓ lab02_prompts.md found"
           else
-            echo "✗ lab02_prompts.md not found"
+            echo "✗ week02_prompts.md not found"
             exit 1
           fi
