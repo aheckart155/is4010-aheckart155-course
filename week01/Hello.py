@@ -9,7 +9,7 @@ This program demonstrates that your Python environment is correctly configured.
 
 def main():
     """Print a greeting and verify Python installation."""
-    print("Hello, IS4010!")
+    print("hello, IS4010!")
     print("My development environment is ready.")
 
     import sys
